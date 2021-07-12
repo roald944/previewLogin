@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family      : 'Poppins', sans-serif;
+    transition       : .3s ease;
+    /* margin        : 0; */
+    /* padding       : 0; */
+}
+
+.wrapper {
+    box-shadow   : 1px 1px 4px dimgray;
+    padding      : 1em;
+    width        : 25em;
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    border-radius: .3em;
+    justify-items: center;
+    text-align   : center;
+    animation    : myanim 1s ease;
+}
+
+.wrapper p {
+    font-size  : 3em;
+    font-weight: bold;
+}
+
+.wrapper a {
+    text-transform : uppercase;
+    text-decoration: none;
+    font-weight    : bold;
+}
+
+.wrapper>div {
+    position: relative;
+    display : grid;
+    margin  : 1.5em;
+}
+
+.wrapper>div :is(img, label) {
+    position: absolute;
+}
+
+.wrapper>div img {
+    height    : 45px;
+    bottom    : .3em;
+    right     : .5em;
+    background: white;
+    cursor    : pointer;
+}
+
+.wrapper>div label {
+    color         : dimgray;
+    top           : 1em;
+    left          : 0;
+    text-indent   : 1em;
+    pointer-events: none;
+}
+
+.wrapper>div input {
+    border       : none;
+    border       : 1px solid black;
+    padding      : .5em;
+    font-size    : 1.3em;
+    border-radius: 1em;
+    outline      : none;
+}
+
+.wrapper>div input[type='submit'] {
+    font-size  : 1em;
+    font-weight: bold;
+    padding    : .3em;
+    background : lightgray;
+    border     : none;
+    cursor     : pointer;
+}
+
+.wrapper>div input[type='submit']:hover {
+    background: darkgray;
+    color     : white;
+}
+
+.wrapper>div :is(input:focus ~ label, input:valid~label) {
+    top        : -1.5em;
+    font-weight: bold;
+    color      : black;
+}
+
+@keyframes myanim {
+    from {
+        left   : 0%;
+        opacity: 0;
+    }
+
+    to {
+        left   : 50%;
+        opacity: 1;
+    }
+}

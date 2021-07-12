@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PROJECT | Login</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>Login</p>
+        <h4>Welcome</h4>
+        <div class="inps">
+            <input type="text" name="" id="loginusername" required>
+            <label for="">Username</label>
+        </div>
+        <div class="inps">
+            <input type="password" name="" id="loginpassword" required>
+            <label for="">Password</label>
+            <img src="" alt="" id="togglepass" onclick="toggles();">
+        </div>
+        <div class="inps">
+            <!-- //? this redirects to the main page -->
+            <input type="submit" name="" id="btnLogin" value="LOGIN" onclick="gotoindex()">
+        </div>
+        <a href="register.html">Don't have an account ?</a>
+    </div>
+    <script>
+
+        var btnLogin = document.getElementById('btnLogin');
+        function gotoindex() {
+            location.replace("./index.html");
+        }
+        var togglepass = document.getElementById('togglepass');
+        var loginpassword = document.getElementById('loginpassword');
+        togglepass.src = "icons/show.png";
+        function toggles() {
+            if (loginpassword.type === "password") {
+                loginpassword.type = "text";
+                togglepass.src = "icons/hide.png";
+            } else {
+                loginpassword.type = "password";
+                togglepass.src = "icons/show.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

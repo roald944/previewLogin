@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PROJECT | Register</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>Register</p>
+        <div class="inps">
+            <input type="text" name="" id="" required>
+            <label for="">Create Username</label>
+        </div>
+        <div class="inps">
+            <input type="password" name="" id="createpassword" required>
+            <label for="">Create Password</label>
+            <img src="" alt="" id="togglepass" onclick="toggles();">
+        </div>
+        <div class="inps">
+            <input type="submit" name="" id="" value="REGISTER">
+        </div>
+        <a href="login.html">Already have an account ?</a>
+    </div>
+    <script>
+        var togglepass = document.getElementById('togglepass');
+        var createpassword = document.getElementById('createpassword');
+        togglepass.src = "icons/show.png";
+        function toggles() {
+            if (createpassword.type === "password") {
+                createpassword.type = "text";
+                togglepass.src = "icons/hide.png";
+            } else {
+                createpassword.type = "password";
+                togglepass.src = "icons/show.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
