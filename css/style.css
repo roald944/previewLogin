@@ -10,7 +10,8 @@
 .wrapper {
     box-shadow   : 1px 1px 4px dimgray;
     padding      : 1em;
-    width        : 25em;
+    height       : auto;
+    width        : auto;
     position     : absolute;
     top          : 50%;
     left         : 50%;

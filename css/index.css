@@ -18,12 +18,22 @@
   }
 
   header {
-      background: dimgray;
-      height    : auto;
-      width     : auto;
-      padding   : 1em;
-      color     : wheat;
+      background     : dimgray;
+      height         : auto;
+      width          : auto;
+      padding        : 1em;
+      color          : wheat;
+      display        : flex;
+      justify-content: space-between;
+      align-items    : center;
+      letter-spacing : 1px;
+  }
 
+  header p a {
+      color          : white;
+      text-decoration: none;
+      font-weight    : bold;
+      animation      : blinking 1s ease-in-out;
   }
 
   nav {
@@ -31,6 +41,7 @@
       display        : flex;
       justify-content: space-between;
       align-items    : center;
+      transition     : 1s ease;
   }
 
   nav>a {
@@ -38,6 +49,8 @@
       font-weight    : bold;
       font-size      : 1.5em;
       padding        : .5em;
+      color          : black;
+      transition     : 1s ease;
   }
 
   nav ul {
@@ -47,20 +60,44 @@
       align-items    : center;
       gap            : 1em;
       padding        : 1em;
+      transition     : 1s ease;
   }
 
   nav ul li a {
       text-decoration: none;
+      color          : black;
+      font-weight    : bold;
+      padding        : .3em;
+      transition     : .3s ease;
+  }
+
+  nav ul li a:hover {
+      background-color: black;
+      color           : white;
+      border-radius   : 1em;
   }
 
   .sticky {
-      position: fixed;
-      top     : 0;
-      width   : 100%;
+      position  : fixed;
+      top       : 0;
+      width     : 100%;
+      box-shadow: 0px 1px 3px black;
+      transition: 1s ease;
   }
 
   section {
       padding: 1em;
       height : 100vh;
       width  : auto;
+  }
+
+
+  @keyframes blinking {
+      from {
+          color: red;
+      }
+
+      to {
+          color: white;
+      }
   }
