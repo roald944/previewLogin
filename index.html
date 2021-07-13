@@ -6,35 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Document</title>
+    <title>Project | MainPage</title>
 </head>
 
 <body>
-
+    <header>
+        <h1>Welcome!</h1>
+        <h5>This is a preview.</h5>
+    </header>
     <nav id="nav">
-        <a href="">LOGO</a>
+        <a href="">Hello!</a>
         <ul>
-            <li><a href="index.html">About Me</a></li>
+            <li><a href="">About Me</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Register</a></li>
         </ul>
     </nav>
     <section>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo vero officiis distinctio odit! Natus sunt
-            quidem doloribus, facilis laborum, iste repellendus quo quod quia nobis dignissimos consequatur, veniam
-            aspernatur nisi?</p>
+
     </section>
-    <script>
-        const nav = document.querySelector('#nav');
-        let navTop = nav.offsetTop;
-        function fixedNav() {
-            if (window.scrollY >= navTop) {
-                nav.classList.add('fixed');
+    <script type="text/javascript">
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("nav");
+        var sticky = navbar.offsetTop;
+        var body = document.querySelector('body');
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
             } else {
-                nav.classList.remove('fixed');
+                navbar.classList.remove("sticky");
             }
         }
-        window.addEventListener('scroll', fixedNav);
     </script>
 </body>
 
