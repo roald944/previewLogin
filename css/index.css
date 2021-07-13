@@ -33,7 +33,7 @@
       color          : white;
       text-decoration: none;
       font-weight    : bold;
-      animation      : blinking 1s ease-in-out;
+      animation      : blinking 1s infinite;
   }
 
   nav {
@@ -94,7 +94,7 @@
 
   @keyframes blinking {
       from {
-          color: red;
+          color: black;
       }
 
       to {
