@@ -2,107 +2,148 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    transition : .3s ease;
     margin     : 0;
     padding    : 0;
+    transition : .3s ease;
+}
+
+body {
+    height         : 100vh;
+    width          : 100vw;
+    position       : relative;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-evenly;
 }
 
 .wrapper {
-    box-shadow   : 1px 1px 4px dimgray;
-    padding      : 1em;
     height       : auto;
-    width        : auto;
-    position     : absolute;
-    top          : 50%;
-    left         : 50%;
-    transform    : translate(-50%, -50%);
-    border-radius: .3em;
-    justify-items: center;
-    text-align   : center;
-    animation    : myanim 1s ease;
+    width        : 20em;
+    box-shadow   : 0 0 3px black;
+    padding      : 3em;
+    border-radius: .7em;
+    position     : relative;
+    display      : grid;
+    align-items  : center;
+    grid-gap     : 1em;
+    transition   : .3s ease;
 }
+
+.wrapper>a:nth-child(1) {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-weight    : bold;
+    position       : absolute;
+    top            : .3em;
+    right          : .3em;
+    font-size      : 2em;
+    height         : 50px;
+    width          : 50px;
+    text-align     : center;
+    text-decoration: none;
+    color          : black;
+    border-radius  : .3em;
+}
+
+.wrapper>a:nth-child(1):hover {
+    background-color: #ce0606;
+    color           : white;
+}
+
+.wrapper #reg {
+    text-align     : center;
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    text-decoration: none;
+    color          : #000;
+    font-weight    : bold;
+    letter-spacing : 1.5px;
+    position       : relative;
+}
+
 
 .wrapper p {
-    font-size  : 3em;
-    font-weight: bold;
+    font-weight   : bold;
+    font-size     : 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.wrapper a {
-    text-transform : uppercase;
-    text-decoration: none;
-    font-weight    : bold;
+
+.wrapper .inps {
+    margin-top: 1em;
+    display   : grid;
+    position  : relative;
 }
 
-.wrapper>div {
-    position: relative;
-    display : grid;
-    margin  : 1.5em;
-}
-
-.wrapper>div :is(img, label) {
-    position: absolute;
-}
-
-.wrapper>div img {
-    height                    : 20px;
-    width                     : auto;
-    border-right              : 1px solid black;
-    border-bottom             : 1px solid black;
-    border-top                : 1px solid black;
-    border-top-right-radius   : 1em;
-    border-bottom-right-radius: 1em;
-    padding                   : 1em;
-    bottom                    : 0em;
-    right                     : 0em;
-    background                : white;
-    cursor                    : pointer;
-}
-
-.wrapper>div label {
-    color         : dimgray;
-    top           : 1em;
-    left          : 0;
-    text-indent   : 1em;
+.wrapper .inps label {
+    position      : absolute;
+    top           : .7em;
+    left          : 0em;
+    text-indent   : .7em;
     pointer-events: none;
+    font-weight   : bold;
+    color         : dimgray;
+    letter-spacing: 2px;
 }
 
-.wrapper>div input {
+.wrapper .inps i {
+    position        : absolute;
+    bottom          : .2em;
+    right           : .1em;
+    padding         : .7em;
+    cursor          : pointer;
+    border-radius   : .5em;
+    background-color: white;
+}
+
+
+.wrapper .inps input {
     border       : none;
-    border       : 1px solid black;
     padding      : .5em;
-    font-size    : 1.3em;
-    border-radius: 1em;
+    font-size    : 16px;
     outline      : none;
+    font-weight  : 600;
+    border-radius: .4em;
+    border       : 2px solid lightgray;
 }
 
-.wrapper>div input[type='submit'] {
-    font-size  : 1em;
-    font-weight: bold;
-    padding    : .3em;
-    background : lightgray;
-    border     : none;
-    cursor     : pointer;
+
+.wrapper .inps #btnLogin {
+    padding         : 0;
+    cursor          : pointer;
+    background-color: dimgray;
+    border          : none;
+    padding         : .2em;
+    letter-spacing  : 2px;
+    color           : #fff;
 }
 
-.wrapper>div input[type='submit']:hover {
-    background: darkgray;
-    color     : white;
+.wrapper .inps #btnLogin:hover {
+    background-color: lightgray;
+    color           : #0009;
 }
 
-.wrapper>div :is(input:focus ~ label, input:valid~label) {
-    top        : -1.5em;
-    font-weight: bold;
-    color      : black;
+.wrapper .inps :is(input:focus ~ label, input:valid~label) {
+    top             : -.7em;
+    left            : .5em;
+    text-indent     : 0;
+    color           : black;
+    font-size       : .9em;
+    background-color: white;
+    padding         : 0;
 }
 
-@keyframes myanim {
-    from {
-        left   : 0%;
-        opacity: 0;
-    }
+.wrapper .inps :is(input:focus, input:valid) {
+    border: 2px solid black;
+}
 
-    to {
-        left   : 50%;
-        opacity: 1;
+@media (max-width:720px) {
+    .wrapper {
+        width : 90%;
+        height: auto;
+        margin: 1em;
     }
 }
