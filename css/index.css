@@ -12,7 +12,6 @@
   }
 
   body::-webkit-scrollbar {
-      /*background: black;*/
       width     : 0;
       background: transparent;
   }
@@ -24,6 +23,7 @@
       padding        : 1em;
       color          : wheat;
       display        : flex;
+      gap            : 1em;
       justify-content: space-between;
       align-items    : center;
       letter-spacing : 1px;
@@ -33,7 +33,6 @@
       color          : white;
       text-decoration: none;
       font-weight    : bold;
-      animation      : blinking 1s infinite;
   }
 
   nav {
@@ -89,15 +88,4 @@
       padding: 1em;
       height : 100vh;
       width  : auto;
-  }
-
-
-  @keyframes blinking {
-      from {
-          color: black;
-      }
-
-      to {
-          color: white;
-      }
   }
