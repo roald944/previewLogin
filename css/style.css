@@ -44,13 +44,8 @@
 }
 
 .wrapper>div img {
-    height                    : 15px;
+    height                    : 20px;
     width                     : auto;
-    border-right              : 1px solid black;
-    border-bottom             : 1px solid black;
-    border-top                : 1px solid black;
-    border-top-right-radius   : 1em;
-    border-bottom-right-radius: 1em;
     padding                   : 1em;
     bottom                    : 0em;
     right                     : 0em;
